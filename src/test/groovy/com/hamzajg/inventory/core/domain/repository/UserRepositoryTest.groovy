@@ -4,7 +4,8 @@ import com.hamzajg.inventory.core.domain.model.User
 import spock.lang.Specification
 
 class UserRepositoryTest extends Specification {
-    UserRepository userRepository = new InMemoryUserRepository()
+//    UserRepository userRepository = new InMemoryUserRepository()
+    UserRepository userRepository = new EventSourcedUserRepository()
     def 'should be able to save and load user'(){
         given:
         UUID uuid = UUID.randomUUID()
