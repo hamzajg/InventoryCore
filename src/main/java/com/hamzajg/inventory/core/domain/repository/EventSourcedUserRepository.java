@@ -12,6 +12,7 @@ import java.util.concurrent.ConcurrentHashMap;
 public class EventSourcedUserRepository implements UserRepository {
 
     private final Map<UUID, List<DomainEvent>> users = new ConcurrentHashMap<>();
+
     @Override
     public void save(User user) {
         List<DomainEvent> newEvents = user.getEvents();

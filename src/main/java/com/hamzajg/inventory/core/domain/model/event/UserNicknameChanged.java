@@ -7,7 +7,6 @@ import java.time.Instant;
 public class UserNicknameChanged implements DomainEvent {
     private final String newNickName;
     private final Instant when;
-    private String newNickname = "";
 
     public UserNicknameChanged(String newNickName, Instant when) {
 
@@ -16,7 +15,7 @@ public class UserNicknameChanged implements DomainEvent {
     }
 
     public String getNewNickName() {
-        return newNickname;
+        return newNickName;
     }
 
     @Override
